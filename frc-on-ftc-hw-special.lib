@@ -1,0 +1,54 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# TPS566238PRQFR
+#
+DEF TPS566238PRQFR IC 0 30 Y Y 1 F N
+F0 "IC" 1050 300 50 H V L CNN
+F1 "TPS566238PRQFR" 1050 200 50 H V L CNN
+F2 "TPS566238PRQFR" 1050 100 50 H I L CNN
+F3 "https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Ftps566238" 1050 0 50 H I L CNN
+F4 "3 V to 18 V Input 6 A Synchronous Step Down Voltage Regulator With Pulse" 1050 -100 50 H I L CNN "Description"
+F5 "1" 1050 -200 50 H I L CNN "Height"
+F6 "Texas Instruments" 1050 -300 50 H I L CNN "Manufacturer_Name"
+F7 "TPS566238PRQFR" 1050 -400 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+P 5 0 1 6 200 100 1000 100 1000 -500 200 -500 200 100 N
+X VCC 1 0 -200 200 R 50 50 0 0 P
+X FB 2 1200 -200 200 L 50 50 0 0 P
+X EN 3 0 -300 200 R 50 50 0 0 P
+X PGND 4 1200 -400 200 L 50 50 0 0 P
+X VIN_1 5 0 0 200 R 50 50 0 0 P
+X VIN_2 6 0 -100 200 R 50 50 0 0 P
+X BST 7 1200 0 200 L 50 50 0 0 P
+X SW 8 1200 -100 200 L 50 50 0 0 P
+X PG 9 0 -400 200 R 50 50 0 0 P
+ENDDRAW
+ENDDEF
+#
+# TPS566238RQFR
+#
+DEF TPS566238RQFR IC 0 30 Y Y 1 F N
+F0 "IC" 1050 300 50 H V L CNN
+F1 "TPS566238RQFR" 1050 200 50 H V L CNN
+F2 "TPS566238RQFR" 1050 100 50 H I L CNN
+F3 "https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Ftps566238" 1050 0 50 H I L CNN
+F4 "3 V to 18 V Input 6 A Synchronous Step Down Voltage Regulator With Pulse" 1050 -100 50 H I L CNN "Description"
+F5 "1" 1050 -200 50 H I L CNN "Height"
+F6 "Texas Instruments" 1050 -300 50 H I L CNN "Manufacturer_Name"
+F7 "TPS566238PRQFR" 1050 -400 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+P 5 0 1 6 200 100 1000 100 1000 -500 200 -500 200 100 N
+X VCC 1 0 -200 200 R 50 50 0 0 P
+X FB 2 1200 -200 200 L 50 50 0 0 P
+X EN 3 0 -300 200 R 50 50 0 0 P
+X PGND 4 1200 -400 200 L 50 50 0 0 P
+X VIN_1 5 0 0 200 R 50 50 0 0 P
+X VIN_2 6 0 -100 200 R 50 50 0 0 P
+X BST 7 1200 0 200 L 50 50 0 0 P
+X SW 8 1200 -100 200 L 50 50 0 0 P
+X SS 9 0 -400 200 R 50 50 0 0 P
+ENDDRAW
+ENDDEF
+#
+#End Library
