@@ -7,20 +7,20 @@
       "Application": "Pcbnew",
       "Version":     "(5.1.6-0)"
     },
-    "CreationDate":  "2022-04-30T15:34:59-07:00"
+    "CreationDate":  "2022-04-30T15:33:10-07:00"
   },
   "GeneralSpecs":
   {
     "ProjectId":
     {
-      "Name": "talonsrx-enc-limit-ftc",
-      "GUID": "74616c6f-6e73-4727-982d-656e632d6c69",
+      "Name": "jetson-nano-ppoe",
+      "GUID": "6a657473-6f6e-42d6-9e61-6e6f2d70706f",
       "Revision": "rev?"
     },
     "Size":
     {
-      "X": 43.865,
-      "Y": 27.990
+      "X": 14.050,
+      "Y": 79.050
     },
     "LayerNumber": 2,
     "BoardThickness":  1.600
@@ -29,58 +29,58 @@
   [
     {
       "Layers": "Outer",
-      "PadToPad":  0.254,
-      "PadToTrack":  0.254,
-      "TrackToTrack":  0.254,
-      "MinLineWidth":  0.254,
-      "TrackToRegion":  0.254,
-      "RegionToRegion":  0.254
+      "PadToPad":  0.203,
+      "PadToTrack":  0.203,
+      "TrackToTrack":  0.203,
+      "MinLineWidth":  0.203,
+      "TrackToRegion":  0.203,
+      "RegionToRegion":  0.203
     }
   ],
   "FilesAttributes":
   [
     {
-      "Path":  "talonsrx-enc-limit-ftc-F_Cu.gbr",
+      "Path":  "jetson-nano-ppoe-F_Cu.gbr",
       "FileFunction":  "Copper,L1,Top",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "talonsrx-enc-limit-ftc-B_Cu.gbr",
+      "Path":  "jetson-nano-ppoe-B_Cu.gbr",
       "FileFunction":  "Copper,L2,Bot",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "talonsrx-enc-limit-ftc-F_Paste.gbr",
+      "Path":  "jetson-nano-ppoe-F_Paste.gbr",
       "FileFunction":  "SolderPaste,Top",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "talonsrx-enc-limit-ftc-B_Paste.gbr",
+      "Path":  "jetson-nano-ppoe-B_Paste.gbr",
       "FileFunction":  "SolderPaste,Bot",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "talonsrx-enc-limit-ftc-F_SilkS.gbr",
+      "Path":  "jetson-nano-ppoe-F_SilkS.gbr",
       "FileFunction":  "Legend,Top",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "talonsrx-enc-limit-ftc-B_SilkS.gbr",
+      "Path":  "jetson-nano-ppoe-B_SilkS.gbr",
       "FileFunction":  "Legend,Bot",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "talonsrx-enc-limit-ftc-F_Mask.gbr",
+      "Path":  "jetson-nano-ppoe-F_Mask.gbr",
       "FileFunction":  "SolderMask,Top",
       "FilePolarity":  "Negative"
     },
     {
-      "Path":  "talonsrx-enc-limit-ftc-B_Mask.gbr",
+      "Path":  "jetson-nano-ppoe-B_Mask.gbr",
       "FileFunction":  "SolderMask,Bot",
       "FilePolarity":  "Negative"
     },
     {
-      "Path":  "talonsrx-enc-limit-ftc-Edge_Cuts.gbr",
+      "Path":  "jetson-nano-ppoe-Edge_Cuts.gbr",
       "FileFunction":  "Profile",
       "FilePolarity":  "Positive"
     }
