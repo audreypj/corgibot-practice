@@ -204,29 +204,6 @@ X D 3 100 200 100 D 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device_R_Pack04_SIP_Split
-#
-DEF Device_R_Pack04_SIP_Split RN 0 0 Y N 4 F N
-F0 "RN" 80 0 50 V V C CNN
-F1 "Device_R_Pack04_SIP_Split" 0 0 50 V V C CNN
-F2 "Resistor_THT:R_Array_SIP8" -80 0 50 V I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- R?Array?SIP*
-$ENDFPLIST
-DRAW
-S 40 100 -40 -100 0 1 10 N
-X R1.1 1 0 -150 50 U 50 50 1 1 P
-X R1.2 2 0 150 50 D 50 50 1 1 P
-X R2.1 3 0 -150 50 U 50 50 2 1 P
-X R2.2 4 0 150 50 D 50 50 2 1 P
-X R3.1 5 0 -150 50 U 50 50 3 1 P
-X R3.2 6 0 150 50 D 50 50 3 1 P
-X R4.1 7 0 -150 50 U 50 50 4 1 P
-X R4.2 8 0 150 50 D 50 50 4 1 P
-ENDDRAW
-ENDDEF
-#
 # Device_R_Small
 #
 DEF Device_R_Small R 0 10 N N 1 F N
@@ -259,6 +236,28 @@ C 0 0 50 0 1 50 N
 ENDDRAW
 ENDDEF
 #
+# Simulation_SPICE_VDC
+#
+DEF Simulation_SPICE_VDC V 0 1 N Y 1 F N
+F0 "V" 100 100 50 H V L CNN
+F1 "Simulation_SPICE_VDC" 100 0 50 H V L CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+F4 "Y" 0 0 50 H I L CNN "Spice_Netlist_Enabled"
+F5 "V" 0 0 50 H I L CNN "Spice_Primitive"
+F6 "dc(1)" 100 -100 50 H V L CNN "Spice_Model"
+DRAW
+C 0 0 100 0 1 10 f
+T 0 0 75 50 0 0 0 + Normal 0 C C
+P 2 0 0 0 -50 10 50 10 N
+P 2 0 0 0 -30 -10 -50 -10 N
+P 2 0 0 0 10 -10 -10 -10 N
+P 2 0 0 0 50 -10 30 -10 N
+X ~ 1 0 200 100 D 50 50 1 1 P
+X ~ 2 0 -200 100 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # frc-on-ftc-hw-special_Q_NMOS_DUAL
 #
 DEF frc-on-ftc-hw-special_Q_NMOS_DUAL Q 0 0 Y N 2 F N
@@ -285,6 +284,29 @@ X D 6 100 200 100 D 50 50 1 1 P
 X D 3 100 200 100 D 50 50 2 1 P
 X S 4 100 -200 100 U 50 50 2 1 P
 X G 5 -200 0 210 R 50 50 2 1 I
+ENDDRAW
+ENDDEF
+#
+# frc-on-ftc-hw-special_R_Pack04_SMD_Split
+#
+DEF frc-on-ftc-hw-special_R_Pack04_SMD_Split RN 0 0 Y N 4 F N
+F0 "RN" 80 0 50 V V C CNN
+F1 "frc-on-ftc-hw-special_R_Pack04_SMD_Split" 0 0 50 V V C CNN
+F2 "Resistor_THT:R_Array_SIP8" -80 0 50 V I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ R?Array?SIP*
+$ENDFPLIST
+DRAW
+S 40 100 -40 -100 0 1 10 N
+X R1.1 1 0 -150 50 U 50 50 1 1 P
+X R1.2 8 0 150 50 D 50 50 1 1 P
+X R1.1 2 0 -150 50 U 50 50 2 1 P
+X R1.2 7 0 150 50 D 50 50 2 1 P
+X R1.1 3 0 -150 50 U 50 50 3 1 P
+X R1.2 6 0 150 50 D 50 50 3 1 P
+X R1.1 4 0 -150 50 U 50 50 4 1 P
+X R1.2 5 0 150 50 D 50 50 4 1 P
 ENDDRAW
 ENDDEF
 #

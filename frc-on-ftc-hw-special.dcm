@@ -1,5 +1,11 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP R_Pack04_SMD_Split
+D 4 resistor network, parallel topology, SIP package, split
+K R network parallel topology isolated
+F http://www.vishay.com/docs/31509/csc.pdf
+$ENDCMP
+#
 $CMP TPS566238PRQFR
 D 3 V to 18 V Input 6 A Synchronous Step Down Voltage Regulator With Pulse
 F https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Ftps566238

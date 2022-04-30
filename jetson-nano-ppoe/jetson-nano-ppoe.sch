@@ -227,6 +227,8 @@ F 0 "#PWR0106" H 4500 3100 50  0001 C CNN
 F 1 "+12V" H 4515 3423 50  0000 C CNN
 F 2 "" H 4500 3250 50  0001 C CNN
 F 3 "" H 4500 3250 50  0001 C CNN
+F 4 "I" H 4500 3250 50  0001 C CNN "Spice_Primitive"
+F 5 "N" H 4500 3250 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    4500 3250
 	1    0    0    -1  
 $EndComp
@@ -628,6 +630,10 @@ F 4 "Micro Commercial Co" V 3300 3450 50  0001 C CNN "Mfg"
 F 5 "SI2305B" V 3300 3450 50  0001 C CNN "Mfg PN"
 F 6 "Diodes Incorporated" V 3300 3450 50  0001 C CNN "Mfg 2"
 F 7 "DMG2305UX-7" V 3300 3450 50  0001 C CNN "Mfg PN 2"
+F 8 "M" H 3300 3450 50  0001 C CNN "Spice_Primitive"
+F 9 "cmosp" H 3300 3450 50  0001 C CNN "Spice_Model"
+F 10 "Y" H 3300 3450 50  0001 C CNN "Spice_Netlist_Enabled"
+F 11 "/Users/ihartwig/repos/KiCad-Spice-Library/Models/Transistor/FET/cmos.lib" H 3300 3450 50  0001 C CNN "Spice_Lib_File"
 	1    3300 3450
 	0    -1   -1   0   
 $EndComp
@@ -641,11 +647,15 @@ F 0 "D1" V 4196 3530 50  0000 R CNN
 F 1 "Green" V 4105 3530 50  0000 R CNN
 F 2 "LED_SMD:LED_0603_1608Metric" V 4150 3600 50  0001 C CNN
 F 3 "~" V 4150 3600 50  0001 C CNN
+F 4 "D" H 4150 3600 50  0001 C CNN "Spice_Primitive"
+F 5 "LED_GENERAL" H 4150 3600 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4150 3600 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "/Users/ihartwig/repos/KiCad-Spice-Library/Models/Diode/led.lib" H 4150 3600 50  0001 C CNN "Spice_Lib_File"
 	1    4150 3600
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R_Pack04_SIP_Split RN1
+L frc-on-ftc-hw-special:R_Pack04_SMD_Split RN1
 U 4 1 626CB9B3
 P 3700 4100
 F 0 "RN1" H 3788 4146 50  0000 L CNN
@@ -656,7 +666,7 @@ F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 3700 4100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Pack04_SIP_Split RN1
+L frc-on-ftc-hw-special:R_Pack04_SMD_Split RN1
 U 3 1 626CC091
 P 4150 4100
 F 0 "RN1" H 4238 4146 50  0000 L CNN
@@ -667,7 +677,7 @@ F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 4150 4100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Pack04_SIP_Split RN2
+L frc-on-ftc-hw-special:R_Pack04_SMD_Split RN2
 U 3 1 626CC5BF
 P 4150 6450
 F 0 "RN2" H 4238 6496 50  0000 L CNN
@@ -675,19 +685,6 @@ F 1 "10k" H 4238 6405 50  0000 L CNN
 F 2 "Resistor_SMD:R_Array_Convex_4x1206" V 4070 6450 50  0001 C CNN
 F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 4150 6450 50  0001 C CNN
 	3    4150 6450
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Pack04_SIP_Split RN1
-U 1 1 626CC9C4
-P 2700 3600
-F 0 "RN1" H 2788 3646 50  0000 L CNN
-F 1 "10k" H 2788 3555 50  0000 L CNN
-F 2 "Resistor_SMD:R_Array_Convex_4x1206" V 2620 3600 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 2700 3600 50  0001 C CNN
-F 4 "Yaego" H 2700 3600 50  0001 C CNN "Mfg"
-F 5 "YC164-JR-0710KL" H 2700 3600 50  0001 C CNN "Mfg PN"
-	1    2700 3600
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -716,6 +713,8 @@ F 0 "#PWR0112" H 3700 4700 50  0001 C CNN
 F 1 "GND" H 3705 4777 50  0000 C CNN
 F 2 "" H 3700 4950 50  0001 C CNN
 F 3 "" H 3700 4950 50  0001 C CNN
+F 4 "I" H 3700 4950 50  0001 C CNN "Spice_Primitive"
+F 5 "N" H 3700 4950 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    3700 4950
 	1    0    0    -1  
 $EndComp
@@ -729,6 +728,12 @@ F 0 "D3" V 3654 3680 50  0000 L CNN
 F 1 "5.1V" V 3745 3680 50  0000 L CNN
 F 2 "Diode_SMD:D_SOD-323_HandSoldering" H 3700 3600 50  0001 C CNN
 F 3 "~" H 3700 3600 50  0001 C CNN
+F 4 "X" H 3700 3600 50  0001 C CNN "Spice_Primitive"
+F 5 "DI_1N4733A" H 3700 3600 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 3700 3600 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "/Users/ihartwig/repos/KiCad-Spice-Library/Models/Diode/zener.lib" H 3700 3600 50  0001 C CNN "Spice_Lib_File"
+F 8 "Nexperia" V 3700 3600 50  0001 C CNN "Mfg"
+F 9 "BZX384-C5V1,115" V 3700 3600 50  0001 C CNN "Mfg PN"
 	1    3700 3600
 	0    1    1    0   
 $EndComp
@@ -768,6 +773,8 @@ F 0 "#PWR0114" H 4550 5450 50  0001 C CNN
 F 1 "+12V" H 4565 5773 50  0000 C CNN
 F 2 "" H 4550 5600 50  0001 C CNN
 F 3 "" H 4550 5600 50  0001 C CNN
+F 4 "I" H 4550 5600 50  0001 C CNN "Spice_Primitive"
+F 5 "N" H 4550 5600 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    4550 5600
 	1    0    0    -1  
 $EndComp
@@ -801,6 +808,10 @@ F 4 "Micro Commercial Co" V 3300 5800 50  0001 C CNN "Mfg"
 F 5 "SI2305B" V 3300 5800 50  0001 C CNN "Mfg PN"
 F 6 "Diodes Incorporated" V 3300 5800 50  0001 C CNN "Mfg 2"
 F 7 "DMG2305UX-7" V 3300 5800 50  0001 C CNN "Mfg PN 2"
+F 8 "M" H 3300 5800 50  0001 C CNN "Spice_Primitive"
+F 9 "cmosp" H 3300 5800 50  0001 C CNN "Spice_Model"
+F 10 "Y" H 3300 5800 50  0001 C CNN "Spice_Netlist_Enabled"
+F 11 "/Users/ihartwig/repos/KiCad-Spice-Library/Models/Transistor/FET/cmos.lib" H 3300 5800 50  0001 C CNN "Spice_Lib_File"
 	1    3300 5800
 	0    -1   -1   0   
 $EndComp
@@ -812,11 +823,15 @@ F 0 "D2" V 4196 5880 50  0000 R CNN
 F 1 "Green" V 4105 5880 50  0000 R CNN
 F 2 "LED_SMD:LED_0603_1608Metric" V 4150 5950 50  0001 C CNN
 F 3 "~" V 4150 5950 50  0001 C CNN
+F 4 "D" H 4150 5950 50  0001 C CNN "Spice_Primitive"
+F 5 "LED_GENERAL" H 4150 5950 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4150 5950 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "/Users/ihartwig/repos/KiCad-Spice-Library/Models/Diode/led.lib" H 4150 5950 50  0001 C CNN "Spice_Lib_File"
 	1    4150 5950
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R_Pack04_SIP_Split RN2
+L frc-on-ftc-hw-special:R_Pack04_SMD_Split RN2
 U 2 1 627B81AE
 P 2700 6450
 F 0 "RN2" H 2788 6496 50  0000 L CNN
@@ -827,7 +842,7 @@ F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 2700 6450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Pack04_SIP_Split RN2
+L frc-on-ftc-hw-special:R_Pack04_SMD_Split RN2
 U 1 1 627B81B4
 P 2700 5950
 F 0 "RN2" H 2788 5996 50  0000 L CNN
@@ -837,10 +852,10 @@ F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 2700 5950 50  0001 C CNN
 F 4 "Yaego" H 2700 5950 50  0001 C CNN "Mfg"
 F 5 "YC164-JR-0710KL" H 2700 5950 50  0001 C CNN "Mfg PN"
 	1    2700 5950
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
-L Device:R_Pack04_SIP_Split RN2
+L frc-on-ftc-hw-special:R_Pack04_SMD_Split RN2
 U 4 1 627B81BA
 P 3700 6450
 F 0 "RN2" H 3788 6496 50  0000 L CNN
@@ -851,7 +866,7 @@ F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 3700 6450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Pack04_SIP_Split RN1
+L frc-on-ftc-hw-special:R_Pack04_SMD_Split RN1
 U 2 1 627B81C0
 P 2700 4100
 F 0 "RN1" H 2788 4146 50  0000 L CNN
@@ -887,6 +902,8 @@ F 0 "#PWR0116" H 3700 7050 50  0001 C CNN
 F 1 "GND" H 3705 7127 50  0000 C CNN
 F 2 "" H 3700 7300 50  0001 C CNN
 F 3 "" H 3700 7300 50  0001 C CNN
+F 4 "I" H 3700 7300 50  0001 C CNN "Spice_Primitive"
+F 5 "N" H 3700 7300 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    3700 7300
 	1    0    0    -1  
 $EndComp
@@ -900,6 +917,12 @@ F 0 "D4" V 3654 6030 50  0000 L CNN
 F 1 "5.1V" V 3745 6030 50  0000 L CNN
 F 2 "Diode_SMD:D_SOD-323_HandSoldering" H 3700 5950 50  0001 C CNN
 F 3 "~" H 3700 5950 50  0001 C CNN
+F 4 "X" H 3700 5950 50  0001 C CNN "Spice_Primitive"
+F 5 "DI_1N4733A" H 3700 5950 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 3700 5950 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "/Users/ihartwig/repos/KiCad-Spice-Library/Models/Diode/zener.lib" H 3700 5950 50  0001 C CNN "Spice_Lib_File"
+F 8 "Nexperia" V 3700 5950 50  0001 C CNN "Mfg"
+F 9 "BZX384-C5V1,115" V 3700 5950 50  0001 C CNN "Mfg PN"
 	1    3700 5950
 	0    1    1    0   
 $EndComp
@@ -951,6 +974,10 @@ F 4 "Diodes Incorporated" H 3600 4650 50  0001 C CNN "Mfg"
 F 5 "DMN2004DMK" H 3600 4650 50  0001 C CNN "Mfg PN"
 F 6 "Diodes Incorporated" H 3600 4650 50  0001 C CNN "Mfg 2"
 F 7 "DMN5L06DMK-7" H 3600 4650 50  0001 C CNN "Mfg PN 2"
+F 8 "M" H 3600 4650 50  0001 C CNN "Spice_Primitive"
+F 9 "cmosn" H 3600 4650 50  0001 C CNN "Spice_Model"
+F 10 "Y" H 3600 4650 50  0001 C CNN "Spice_Netlist_Enabled"
+F 11 "/Users/ihartwig/repos/KiCad-Spice-Library/Models/Transistor/FET/cmos.lib" H 3600 4650 50  0001 C CNN "Spice_Lib_File"
 	1    3600 4650
 	1    0    0    -1  
 $EndComp
@@ -966,6 +993,10 @@ F 4 "Diodes Incorporated" H 3600 7000 50  0001 C CNN "Mfg"
 F 5 "DMN2004DMK" H 3600 7000 50  0001 C CNN "Mfg PN"
 F 6 "Diodes Incorporated" H 3600 7000 50  0001 C CNN "Mfg 2"
 F 7 "DMN5L06DMK-7" H 3600 7000 50  0001 C CNN "Mfg PN 2"
+F 8 "M" H 3600 7000 50  0001 C CNN "Spice_Primitive"
+F 9 "cmosn" H 3600 7000 50  0001 C CNN "Spice_Model"
+F 10 "Y" H 3600 7000 50  0001 C CNN "Spice_Netlist_Enabled"
+F 11 "/Users/ihartwig/repos/KiCad-Spice-Library/Models/Transistor/FET/cmos.lib" H 3600 7000 50  0001 C CNN "Spice_Lib_File"
 	2    3600 7000
 	1    0    0    -1  
 $EndComp
@@ -993,8 +1024,6 @@ Wire Wire Line
 Wire Wire Line
 	2700 6600 2700 7300
 Wire Wire Line
-	2000 5700 2700 5700
-Wire Wire Line
 	3200 6200 3200 7000
 Wire Wire Line
 	4150 6600 4150 6700
@@ -1013,7 +1042,7 @@ Wire Wire Line
 Wire Wire Line
 	3200 3850 3200 4650
 Wire Wire Line
-	2000 3350 2700 3350
+	2000 3350 2100 3350
 Wire Wire Line
 	3700 4350 4150 4350
 Wire Wire Line
@@ -1026,4 +1055,75 @@ Wire Wire Line
 Connection ~ 4150 3350
 Wire Wire Line
 	4150 3350 3700 3350
+$Comp
+L Simulation_SPICE:VDC V_CONN1
+U 1 1 62A3EAB9
+P 1850 4650
+F 0 "V_CONN1" H 1980 4741 50  0000 L CNN
+F 1 "VDC" H 1980 4650 50  0000 L CNN
+F 2 "" H 1850 4650 50  0001 C CNN
+F 3 "~" H 1850 4650 50  0001 C CNN
+F 4 "Y" H 1850 4650 50  0001 L CNN "Spice_Netlist_Enabled"
+F 5 "V" H 1850 4650 50  0001 L CNN "Spice_Primitive"
+F 6 "dc(1)" H 1980 4559 50  0000 L CNN "Spice_Model"
+	1    1850 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 4950 1850 4950
+Wire Wire Line
+	1850 4950 1850 4850
+Connection ~ 2300 4950
+Wire Wire Line
+	1850 4450 1850 3650
+Wire Wire Line
+	1850 3650 2100 3650
+Wire Wire Line
+	2100 3650 2100 3350
+Connection ~ 2100 3350
+Wire Wire Line
+	2100 3350 2700 3350
+$Comp
+L Simulation_SPICE:VDC V_TR2
+U 1 1 62A55193
+P 1850 7000
+F 0 "V_TR2" H 1980 7091 50  0000 L CNN
+F 1 "VDC" H 1980 7000 50  0000 L CNN
+F 2 "" H 1850 7000 50  0001 C CNN
+F 3 "~" H 1850 7000 50  0001 C CNN
+F 4 "Y" H 1850 7000 50  0001 L CNN "Spice_Netlist_Enabled"
+F 5 "V" H 1850 7000 50  0001 L CNN "Spice_Primitive"
+F 6 "dc(1)" H 1980 6909 50  0000 L CNN "Spice_Model"
+	1    1850 7000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 7300 1850 7300
+Wire Wire Line
+	1850 7300 1850 7200
+Connection ~ 2700 7300
+Wire Wire Line
+	2000 5700 2100 5700
+Wire Wire Line
+	1850 6800 1850 6100
+Wire Wire Line
+	1850 6100 2100 6100
+Wire Wire Line
+	2100 6100 2100 5700
+Connection ~ 2100 5700
+Wire Wire Line
+	2100 5700 2700 5700
+$Comp
+L frc-on-ftc-hw-special:R_Pack04_SMD_Split RN1
+U 1 1 626CC9C4
+P 2700 3600
+F 0 "RN1" H 2788 3646 50  0000 L CNN
+F 1 "10k" H 2788 3555 50  0000 L CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x1206" V 2620 3600 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 2700 3600 50  0001 C CNN
+F 4 "Yaego" H 2700 3600 50  0001 C CNN "Mfg"
+F 5 "YC164-JR-0710KL" H 2700 3600 50  0001 C CNN "Mfg PN"
+	1    2700 3600
+	1    0    0    1   
+$EndComp
 $EndSCHEMATC
