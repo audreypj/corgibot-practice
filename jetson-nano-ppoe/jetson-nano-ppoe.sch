@@ -1126,4 +1126,6 @@ F 5 "YC164-JR-0710KL" H 2700 3600 50  0001 C CNN "Mfg PN"
 	1    2700 3600
 	1    0    0    1   
 $EndComp
+Text Notes 3400 6950 0    50   ~ 0
+Vgs\nMax\n-8V
 $EndSCHEMATC
