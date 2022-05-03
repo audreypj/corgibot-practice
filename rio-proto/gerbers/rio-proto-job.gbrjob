@@ -7,20 +7,20 @@
       "Application": "Pcbnew",
       "Version":     "(5.1.6-0)"
     },
-    "CreationDate":  "2022-05-02T22:36:42-07:00"
+    "CreationDate":  "2022-05-02T22:38:42-07:00"
   },
   "GeneralSpecs":
   {
     "ProjectId":
     {
-      "Name": "talonsrx-enc-limit-ftc",
-      "GUID": "74616c6f-6e73-4727-982d-656e632d6c69",
+      "Name": "rio-proto",
+      "GUID": "72696f2d-7072-46f7-946f-2e6b69636164",
       "Revision": "rev?"
     },
     "Size":
     {
-      "X": 43.865,
-      "Y": 27.990
+      "X": 25.450,
+      "Y": 31.800
     },
     "LayerNumber": 2,
     "BoardThickness":  1.600
@@ -29,58 +29,56 @@
   [
     {
       "Layers": "Outer",
-      "PadToPad":  0.254,
-      "PadToTrack":  0.254,
-      "TrackToTrack":  0.254,
-      "MinLineWidth":  0.254,
-      "TrackToRegion":  0.254,
-      "RegionToRegion":  0.254
+      "PadToPad":  0.203,
+      "PadToTrack":  0.203,
+      "TrackToTrack":  0.203,
+      "MinLineWidth":  0.254
     }
   ],
   "FilesAttributes":
   [
     {
-      "Path":  "talonsrx-enc-limit-ftc-F_Cu.gbr",
+      "Path":  "rio-proto-F_Cu.gbr",
       "FileFunction":  "Copper,L1,Top",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "talonsrx-enc-limit-ftc-B_Cu.gbr",
+      "Path":  "rio-proto-B_Cu.gbr",
       "FileFunction":  "Copper,L2,Bot",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "talonsrx-enc-limit-ftc-F_Paste.gbr",
+      "Path":  "rio-proto-F_Paste.gbr",
       "FileFunction":  "SolderPaste,Top",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "talonsrx-enc-limit-ftc-B_Paste.gbr",
+      "Path":  "rio-proto-B_Paste.gbr",
       "FileFunction":  "SolderPaste,Bot",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "talonsrx-enc-limit-ftc-F_SilkS.gbr",
+      "Path":  "rio-proto-F_SilkS.gbr",
       "FileFunction":  "Legend,Top",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "talonsrx-enc-limit-ftc-B_SilkS.gbr",
+      "Path":  "rio-proto-B_SilkS.gbr",
       "FileFunction":  "Legend,Bot",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "talonsrx-enc-limit-ftc-F_Mask.gbr",
+      "Path":  "rio-proto-F_Mask.gbr",
       "FileFunction":  "SolderMask,Top",
       "FilePolarity":  "Negative"
     },
     {
-      "Path":  "talonsrx-enc-limit-ftc-B_Mask.gbr",
+      "Path":  "rio-proto-B_Mask.gbr",
       "FileFunction":  "SolderMask,Bot",
       "FilePolarity":  "Negative"
     },
     {
-      "Path":  "talonsrx-enc-limit-ftc-Edge_Cuts.gbr",
+      "Path":  "rio-proto-Edge_Cuts.gbr",
       "FileFunction":  "Profile",
       "FilePolarity":  "Positive"
     }
