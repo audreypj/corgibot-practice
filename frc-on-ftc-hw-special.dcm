@@ -16,4 +16,16 @@ D 3 V to 18 V Input 6 A Synchronous Step Down Voltage Regulator With Pulse
 F https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Ftps566238
 $ENDCMP
 #
+$CMP 0530470410
+D Conn Shrouded Header (4 Sides) HDR 4 POS 1.25mm Solder ST Thru-Hole PicoBlade Tray
+K
+F https://www.arrow.com/en/products/0530470410/molex
+$ENDCMP
+#
+$CMP MAX6897AAZT+T
+D Maxim Integrated MAX6897AAZT+T, Voltage Monitor 0.509V max. 6-Pin, SOT-23
+K
+F https://pdfserv.maximintegrated.com/en/ds/MAX6895-MAX6899.pdf
+$ENDCMP
+#
 #End Doc Library

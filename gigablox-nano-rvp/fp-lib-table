@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name frc-on-ftc-hw)(type KiCad)(uri ${KIPRJMOD}/../frc-on-ftc-hw-special.pretty)(options "")(descr ""))
+)
