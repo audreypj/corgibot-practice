@@ -5,17 +5,17 @@
       "Application": "Pcbnew",
       "Version": "(6.0.5-0)"
     },
-    "CreationDate": "2022-07-05T23:23:51-07:00"
+    "CreationDate": "2022-07-05T23:07:10-07:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
-      "Name": "jetson-nano-ppoe",
-      "GUID": "6a657473-6f6e-42d6-9e61-6e6f2d70706f",
+      "Name": "gigablox-nano-rvp",
+      "GUID": "67696761-626c-46f7-982d-6e616e6f2d72",
       "Revision": "rev?"
     },
     "Size": {
-      "X": 14.05,
-      "Y": 79.05
+      "X": 43.65,
+      "Y": 43.65
     },
     "LayerNumber": 2,
     "BoardThickness": 1.6,
@@ -24,57 +24,57 @@
   "DesignRules": [
     {
       "Layers": "Outer",
-      "PadToPad": 0.2032,
-      "PadToTrack": 0.2032,
-      "TrackToTrack": 0.2032,
-      "MinLineWidth": 0.254,
+      "PadToPad": 0.2,
+      "PadToTrack": 0.2,
+      "TrackToTrack": 0.2,
+      "MinLineWidth": 0.25,
       "TrackToRegion": 0.3048,
       "RegionToRegion": 0.3048
     }
   ],
   "FilesAttributes": [
     {
-      "Path": "jetson-nano-ppoe-F_Cu.gbr",
+      "Path": "gigablox-nano-rvp-F_Cu.gbr",
       "FileFunction": "Copper,L1,Top",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "jetson-nano-ppoe-B_Cu.gbr",
+      "Path": "gigablox-nano-rvp-B_Cu.gbr",
       "FileFunction": "Copper,L2,Bot",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "jetson-nano-ppoe-F_Paste.gbr",
+      "Path": "gigablox-nano-rvp-F_Paste.gbr",
       "FileFunction": "SolderPaste,Top",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "jetson-nano-ppoe-B_Paste.gbr",
+      "Path": "gigablox-nano-rvp-B_Paste.gbr",
       "FileFunction": "SolderPaste,Bot",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "jetson-nano-ppoe-F_Silkscreen.gbr",
+      "Path": "gigablox-nano-rvp-F_Silkscreen.gbr",
       "FileFunction": "Legend,Top",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "jetson-nano-ppoe-B_Silkscreen.gbr",
+      "Path": "gigablox-nano-rvp-B_Silkscreen.gbr",
       "FileFunction": "Legend,Bot",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "jetson-nano-ppoe-F_Mask.gbr",
+      "Path": "gigablox-nano-rvp-F_Mask.gbr",
       "FileFunction": "SolderMask,Top",
       "FilePolarity": "Negative"
     },
     {
-      "Path": "jetson-nano-ppoe-B_Mask.gbr",
+      "Path": "gigablox-nano-rvp-B_Mask.gbr",
       "FileFunction": "SolderMask,Bot",
       "FilePolarity": "Negative"
     },
     {
-      "Path": "jetson-nano-ppoe-Edge_Cuts.gbr",
+      "Path": "gigablox-nano-rvp-Edge_Cuts.gbr",
       "FileFunction": "Profile",
       "FilePolarity": "Positive"
     }
