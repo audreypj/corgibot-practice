@@ -4,6 +4,10 @@
 
 package frc.robot;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.motorcontrol.Talon;
@@ -13,7 +17,10 @@ import edu.wpi.first.wpilibj2.command.CommandScheduler;
 
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.TalonSRXConfiguration;
+
 import com.ctre.phoenix.motorcontrol.Faults;
+import com.ctre.phoenix.motorcontrol.LimitSwitchSource;
+import com.ctre.phoenix.motorcontrol.NeutralMode;
 
 import frc.robot.MecanumDriveCTRE;
 import frc.robot.commands.*;
@@ -32,10 +39,11 @@ public class Robot extends TimedRobot {
   private static final int kJoystickARightX = 4;
   private static final int kJoystickARightY = 5;
   /* Robot Hardware */
-  private TalonSRX mFrontLeft;
-  private TalonSRX mRearLeft;
-  private TalonSRX mFrontRight;
-  private TalonSRX mRearRight;
+  private TalonSRX mFrontLeftTalon;
+  private TalonSRX mRearLeftTalon;
+  private TalonSRX mFrontRightTalon;
+  private TalonSRX mRearRightTalon;
+
   private MecanumDriveCTRE mRobotDrive;
   private Joystick mJoystickA;
   private TalonSRXConfiguration mDriveTalonSRXConfigAll;
@@ -47,17 +55,30 @@ public class Robot extends TimedRobot {
 
   @Override
   public void robotInit() {
-    mFrontLeft = new TalonSRX(kFrontLeftId);
-    mRearLeft = new TalonSRX(kRearLeftId);
-    mFrontRight = new TalonSRX(kFrontRightId);
-    mRearRight = new TalonSRX(kRearRightId);
+    mFrontLeftTalon = new TalonSRX(kFrontLeftId);
+    mRearLeftTalon = new TalonSRX(kRearLeftId);
+    mFrontRightTalon = new TalonSRX(kFrontRightId);
+    mRearRightTalon = new TalonSRX(kRearRightId);
+    List<TalonSRX> mDriveTalons = new ArrayList<>(Arrays.asList(
+      mFrontLeftTalon, 
+      mRearLeftTalon, 
+      mFrontRightTalon, 
+      mRearRightTalon
+    ));
     // default motor settings
-    mFrontLeft.configAllSettings(mDriveTalonSRXConfigAll);
+    mDriveTalonSRXConfigAll = new TalonSRXConfiguration();
+    mDriveTalonSRXConfigAll.forwardLimitSwitchSource = LimitSwitchSource.Deactivated;
+    mDriveTalonSRXConfigAll.reverseLimitSwitchSource = LimitSwitchSource.Deactivated;
+    //mDriveTalons.stream().map(t -> t.configAllSettings(mDriveTalonSRXConfigAll));
+    //if we don't care about error codes here we can do this too: 
+    mDriveTalons.forEach(talon -> talon.configAllSettings(mDriveTalonSRXConfigAll));
     // invert the right side motors
-    mFrontRight.setInverted(true);
-    mRearRight.setInverted(true);
+    mFrontRightTalon.setInverted(true);
+    mRearRightTalon.setInverted(true);
+    // coast the drive motors - not part of configAllSettings
+    mDriveTalons.forEach(talon -> talon.setNeutralMode(NeutralMode.Coast));
 
-    mRobotDrive = new MecanumDriveCTRE(mFrontLeft, mRearLeft, mFrontRight, mRearRight);
+    mRobotDrive = new MecanumDriveCTRE(mFrontLeftTalon, mRearLeftTalon, mFrontRightTalon, mRearRightTalon);
     // adjust for 117rpm in front and 312rpm in back
     mRobotDrive.setMotorCoeff(1, 0.375, 1, 0.375);
 
@@ -75,18 +96,18 @@ public class Robot extends TimedRobot {
     Faults frontRightFaults = new Faults();
     Faults rearLeftFaults = new Faults();
     Faults rearRightFaults = new Faults();
-    mFrontLeft.getFaults(frontLeftFaults);
-    mFrontRight.getFaults(frontRightFaults);
-    mRearLeft.getFaults(rearLeftFaults);
-    mRearRight.getFaults(rearRightFaults);
+    mFrontLeftTalon.getFaults(frontLeftFaults);
+    mFrontRightTalon.getFaults(frontRightFaults);
+    mRearLeftTalon.getFaults(rearLeftFaults);
+    mRearRightTalon.getFaults(rearRightFaults);
     SmartDashboard.putString("frontLeft.faults", frontLeftFaults.toString());
     SmartDashboard.putString("frontRight.faults", frontRightFaults.toString());
     SmartDashboard.putString("rearLeft.faults", rearLeftFaults.toString());
     SmartDashboard.putString("rearRight.faults", rearRightFaults.toString());
-    SmartDashboard.putNumber("frontLeft.encoder", mFrontLeft.getSensorCollection().getQuadraturePosition());
-    SmartDashboard.putNumber("frontRight.encoder", mFrontRight.getSensorCollection().getQuadraturePosition());
-    SmartDashboard.putNumber("rearLeft.encoder", mRearLeft.getSensorCollection().getQuadraturePosition());
-    SmartDashboard.putNumber("rearRight.encoder", mRearRight.getSensorCollection().getQuadraturePosition());
+    SmartDashboard.putNumber("frontLeft.encoder", mFrontLeftTalon.getSensorCollection().getQuadraturePosition());
+    SmartDashboard.putNumber("frontRight.encoder", mFrontRightTalon.getSensorCollection().getQuadraturePosition());
+    SmartDashboard.putNumber("rearLeft.encoder", mRearLeftTalon.getSensorCollection().getQuadraturePosition());
+    SmartDashboard.putNumber("rearRight.encoder", mRearRightTalon.getSensorCollection().getQuadraturePosition());
   }
 
   @Override
@@ -108,9 +129,9 @@ public class Robot extends TimedRobot {
     // Use the joystick X axis for lateral movement, Y axis for forward
     // movement, and Z axis for rotation.
     mRobotDrive.driveCartesian(
-      -mJoystickA.getRawAxis(kJoystickARightY),
-      mJoystickA.getRawAxis(kJoystickARightX),
+      -mJoystickA.getRawAxis(kJoystickALeftY),
       mJoystickA.getRawAxis(kJoystickALeftX),
+      mJoystickA.getRawAxis(kJoystickARightX),
       0.0);
   }
 
