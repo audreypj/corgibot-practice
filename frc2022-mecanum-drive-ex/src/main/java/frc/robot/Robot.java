@@ -17,10 +17,11 @@ import edu.wpi.first.wpilibj2.command.CommandScheduler;
 
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.TalonSRXConfiguration;
-
+import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.Faults;
 import com.ctre.phoenix.motorcontrol.LimitSwitchSource;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
+import com.ctre.phoenix.motorcontrol.FeedbackDevice;
 
 import frc.robot.MecanumDriveCTRE;
 import frc.robot.commands.*;
@@ -77,10 +78,19 @@ public class Robot extends TimedRobot {
     mRearRightTalon.setInverted(true);
     // coast the drive motors - not part of configAllSettings
     mDriveTalons.forEach(talon -> talon.setNeutralMode(NeutralMode.Coast));
+    // configure velocity control
+    mDriveTalons.forEach(
+      talon -> talon.configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Relative, 0, 0)
+    );
+    mDriveTalons.forEach(talon -> talon.config_kF(0, 3.83625));
+    mDriveTalons.forEach(talon -> talon.config_kP(0, 2.1));
+    mDriveTalons.forEach(talon -> talon.config_kI(0, 0.002));
 
     mRobotDrive = new MecanumDriveCTRE(mFrontLeftTalon, mRearLeftTalon, mFrontRightTalon, mRearRightTalon);
     // adjust for 117rpm in front and 312rpm in back
     mRobotDrive.setMotorCoeff(1, 0.375, 1, 0.375);
+    // enable velocity control - max scale in ticks/100ms
+    mRobotDrive.setControlMode(ControlMode.Velocity, 260);
 
     mJoystickA = new Joystick(kJoystickAChannel);
 

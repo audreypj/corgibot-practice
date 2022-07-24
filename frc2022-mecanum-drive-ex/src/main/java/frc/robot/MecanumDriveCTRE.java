@@ -77,6 +77,9 @@ public class MecanumDriveCTRE extends RobotDriveBase implements Sendable, AutoCl
   private double m_frontRightCoeff = 1;
   private double m_rearRightCoeff = 1;
 
+  private ControlMode m_driveControlMode = ControlMode.PercentOutput;
+  private double m_driveVelocityScale = 1;
+
   private boolean m_reported;
 
   /**
@@ -161,6 +164,28 @@ public class MecanumDriveCTRE extends RobotDriveBase implements Sendable, AutoCl
     m_rearRightCoeff = rearRightCoeff;
   }
 
+  /**
+   * Set control mode and velocity scale to 1 by default
+   * 
+   * @param controlMode control mode to use setting talon output
+   * @param velocityScale velocity for full scale in ticks/100ms
+   */
+  public void setControlMode(ControlMode controlMode) {
+    m_driveControlMode = controlMode;
+    m_driveVelocityScale = 1;
+  }
+
+  /**
+   * Set control mode and velocity scale (opt)
+   * 
+   * @param controlMode control mode to use setting talon output
+   * @param velocityScale velocity for full scale in ticks/100ms
+   */
+  public void setControlMode(ControlMode controlMode, double velocityScale) {
+    m_driveControlMode = controlMode;
+    m_driveVelocityScale = velocityScale;
+  }
+
   @Override
   public void close() {
     SendableRegistry.remove(this);
@@ -208,10 +233,10 @@ public class MecanumDriveCTRE extends RobotDriveBase implements Sendable, AutoCl
 
     var speeds = driveCartesianIK(ySpeed, xSpeed, zRotation, gyroAngle);
 
-    m_frontLeftMotor.set(ControlMode.PercentOutput, speeds.frontLeft * m_maxOutput * m_frontLeftCoeff);
-    m_frontRightMotor.set(ControlMode.PercentOutput, speeds.frontRight * m_maxOutput * m_frontRightCoeff);
-    m_rearLeftMotor.set(ControlMode.PercentOutput, speeds.rearLeft * m_maxOutput * m_rearLeftCoeff);
-    m_rearRightMotor.set(ControlMode.PercentOutput, speeds.rearRight * m_maxOutput * m_rearRightCoeff);
+    m_frontLeftMotor.set(m_driveControlMode, m_driveVelocityScale * speeds.frontLeft * m_maxOutput * m_frontLeftCoeff);
+    m_frontRightMotor.set(m_driveControlMode, m_driveVelocityScale * speeds.frontRight * m_maxOutput * m_frontRightCoeff);
+    m_rearLeftMotor.set(m_driveControlMode, m_driveVelocityScale * speeds.rearLeft * m_maxOutput * m_rearLeftCoeff);
+    m_rearRightMotor.set(m_driveControlMode, m_driveVelocityScale * speeds.rearRight * m_maxOutput * m_rearRightCoeff);
 
     feed();
   }
