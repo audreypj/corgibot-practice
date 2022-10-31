@@ -2,7 +2,7 @@
   "board": {
     "design_settings": {
       "defaults": {
-        "board_outline_line_width": 0.508,
+        "board_outline_line_width": 0.049999999999999996,
         "copper_line_width": 0.19999999999999998,
         "copper_text_italic": false,
         "copper_text_size_h": 1.5,
@@ -45,16 +45,10 @@
         "silk_text_upright": false,
         "zones": {
           "45_degree_only": false,
-          "min_clearance": 0.30479999999999996
+          "min_clearance": 0.254
         }
       },
-      "diff_pair_dimensions": [
-        {
-          "gap": 0.0,
-          "via_gap": 0.0,
-          "width": 0.0
-        }
-      ],
+      "diff_pair_dimensions": [],
       "drc_exclusions": [],
       "meta": {
         "filename": "board_design_settings.json",
@@ -116,7 +110,7 @@
         "min_through_hole_diameter": 0.3,
         "min_track_width": 0.15,
         "min_via_annular_width": 0.049999999999999996,
-        "min_via_diameter": 0.3,
+        "min_via_diameter": 0.39999999999999997,
         "use_height_for_length_calcs": true
       },
       "track_widths": [
@@ -126,21 +120,9 @@
         0.254,
         0.3048,
         0.4572,
-        0.6096,
-        0.762,
-        0.9144,
-        2.0
+        0.6096
       ],
-      "via_dimensions": [
-        {
-          "diameter": 0.0,
-          "drill": 0.0
-        },
-        {
-          "diameter": 0.6096,
-          "drill": 0.3048
-        }
-      ],
+      "via_dimensions": [],
       "zones_allow_external_fillets": false,
       "zones_use_no_outline": true
     },
@@ -360,14 +342,14 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "jetson-nano-ppoe.kicad_pro",
+    "filename": "talonsrx-sparkmax-teensy.kicad_pro",
     "version": 1
   },
   "net_settings": {
     "classes": [
       {
         "bus_width": 12.0,
-        "clearance": 0.2032,
+        "clearance": 0.254,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -377,7 +359,7 @@
         "name": "Default",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.254,
+        "track_width": 0.2032,
         "via_diameter": 0.6096,
         "via_drill": 0.3048,
         "wire_width": 6.0
@@ -392,9 +374,9 @@
     "last_paths": {
       "gencad": "",
       "idf": "",
-      "netlist": "jetson-nano-ppoe.net",
+      "netlist": "talonsrx-enc-limit-ftc.net",
       "specctra_dsn": "",
-      "step": "jetson-nano-ppoe.step",
+      "step": "",
       "vrml": ""
     },
     "page_layout_descr_file": ""
@@ -439,7 +421,7 @@
   },
   "sheets": [
     [
-      "be58baa7-b4d8-4864-9059-46721827493d",
+      "8378a97a-f593-43e7-a38f-bcab5fbd0616",
       ""
     ]
   ],

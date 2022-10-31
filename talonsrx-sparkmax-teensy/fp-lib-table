@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name talonsrx-enc-limit-ftc-special)(type KiCad)(uri ${KIPRJMOD}/talonsrx-enc-limit-ftc-special.pretty)(options "")(descr ""))
+  (lib (name frc-on-ftc-hw-special)(type KiCad)(uri ${KIPRJMOD}/../frc-on-ftc-hw-special.pretty)(options "")(descr ""))
+)

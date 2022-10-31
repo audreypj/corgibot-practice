@@ -396,7 +396,7 @@
       "idf": "",
       "netlist": "jetson-nano-ppoe.net",
       "specctra_dsn": "",
-      "step": "",
+      "step": "gigablox-nano-rvp.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""
