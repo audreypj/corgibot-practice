@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "frc-on-ftc-hw-special")(type "Legacy")(uri "${KIPRJMOD}/../frc-on-ftc-hw-special.lib")(options "")(descr ""))
+)

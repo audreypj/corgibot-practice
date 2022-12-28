@@ -28,4 +28,10 @@ K
 F https://pdfserv.maximintegrated.com/en/ds/MAX6895-MAX6899.pdf
 $ENDCMP
 #
+$CMP AEAT-6600-T16
+D Board Mount Hall Effect / Magnetic Sensors Magnetic Encoder 16 Bit Programmable
+K
+F https://docs.broadcom.com/docs/AV02-2792EN
+$ENDCMP
+#
 #End Doc Library
